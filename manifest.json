@@ -1,0 +1,31 @@
+{
+	"manifest_version": 2,
+	"name": "PrivateX",
+	"version": "1.0",
+	"description": "Let the users open banking site in Private Mode direclty.",
+	// Addon Manager Icons
+	"icons": {
+		"48": "icons/unsafe-48.png",
+		"96": "icons/unsafe-96.png"
+	},
+	 "permissions": [
+		"activeTab",
+		"tabs",
+		"notifications" 
+	],
+	// Toolbar addon icon
+	"page_action": {
+		"browser_style": true,
+		"default_icon": {
+		"16": "icons/unsafe-16.png",
+		"32": "icons/unsafe-32.png"	
+	},
+	
+	"default_title": "Click here for Private browsing!"
+	},
+	  
+	"background": {
+		"scripts": ["background.js"]
+	}		
+}
+

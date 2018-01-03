@@ -2,23 +2,28 @@
 	"manifest_version": 2,
 	"name": "PrivateX",
 	"version": "1.0",
-	"description": "Let the users open banking site in Private Mode direclty.",
+	"description": "This add-on will allow the user to open a banking website in a private window, without the hassle of copying the URL and such. To use the addon, simply click the addon button[which looks like a magician's glasses strikedthrough] in the address bar, and if the site you're viewing is supported by our addon, you'll be able to open it in a Private Window with a single-click. In case the addon doesn't work on a URL, mail us at jyotsna17gupta[at]gmail[dot]com and we'll get back to you shortly, if and when we'll be able to support that URL.",
+	 "homepage_url": "https://github.com/jyotsna17gupta/PrivateX",
 	// Addon Manager Icons
 	"icons": {
+		"16": "icons/unsafe-16.png",
+		"32": "icons/unsafe-32.png",
 		"48": "icons/unsafe-48.png",
+		"64": "icons/unsafe-64.png",
 		"96": "icons/unsafe-96.png"
 	},
-	 "permissions": [
+	
+	"permissions": [
 		"activeTab",
-		"tabs",
-		"notifications" 
-	],
-	// Toolbar addon icon
+		"tabs"
+		],
+	
 	"page_action": {
 		"browser_style": true,
 		"default_icon": {
 		"16": "icons/unsafe-16.png",
-		"32": "icons/unsafe-32.png"	
+		"32": "icons/unsafe-32.png",
+		"48": "icons/unsafe-48.png"
 	},
 	
 	"default_title": "Click here for Private browsing!"
@@ -26,6 +31,6 @@
 	  
 	"background": {
 		"scripts": ["background.js"]
-	}		
+	}
+	
 }
-

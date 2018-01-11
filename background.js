@@ -56,7 +56,7 @@ var matchURL = function(tab) {
 	var pnb = /^https:\/\/(www\.)?([-a-zA-Z0-9@:%_\+.~#?&//=]*)(pnbindia\.in|netpnb\.com)([-a-zA-Z0-9@:%_\+.~#?&//=]*)/; //Punjab National Bank
 	var societegenerale = /^http(s)?:\/\/(www\.)?([-a-zA-Z0-9@:%_\+.~#?&//=]*)soc(ietegenerale\.(com|asia)|gensolutions\.com)([-a-zA-Z0-9@:%_\+.~#?&//=]*)/; //Societe Generale
 	var sonali = /^https:\/\/(www\.)?([-a-zA-Z0-9@:%_\+.~#?&//=]*)sonalibank\.com([-a-zA-Z0-9@:%_\+.~#?&//=]*)/; //Sonali Bank
-	var sc = /^https:\/\/(www\.)?([-a-zA-Z0-9@:%_\+.~#?&//=]*)s(c|tandardchartered(trade)?\.co(\.in|m))([-a-zA-Z0-9@:%_\+.~#?&//=]*)/; //Standard Chartered Bank 
+	var sc = /^https:\/\/(www\.)?([-a-zA-Z0-9@:%_\+.~#?&//=]*)s(c|tandardchartered(trade)?)\.co(m|\.in)([-a-zA-Z0-9@:%_\+.~#?&//=]*)/; //Standard Chartered Bank 
 	var sbm = /^http(s)?:\/\/(www\.)?([-a-zA-Z0-9@:%_\+.~#?&//=]*)sb(mgroup\.mu|imauritius\.com)([-a-zA-Z0-9@:%_\+.~#?&//=]*)/; //State Bank of Mauritius Ltd.
 	var sbici = /^https:\/\/(www\.)?([-a-zA-Z0-9@:%_\+.~#?&//=]*)sbici\.com([-a-zA-Z0-9@:%_\+.~#?&//=]*)/; //SBI Commercial and International Bank Ltd.
 	var sbi = /^https:\/\/(www\.)?([-a-zA-Z0-9@:%_\+.~#?&//=]*)sbi\.co\.in([-a-zA-Z0-9@:%_\+.~#?&//=]*)/; //State Bank of India
@@ -122,8 +122,6 @@ function callCheck(tab) {
 		}
 	else {
 		showPageAction(tab);
-		browser.pageAction.setIcon({tabId: tab.id, path: "icons/unsafe-64.png"});
-        browser.pageAction.setTitle({tabId: tab.id, title: "Woahh! You are safe!"});
         }
 }
 
@@ -160,5 +158,5 @@ browser.tabs.onUpdated.addListener(function(id, info, tab) {
 //event handler when a new tab is created
 browser.tabs.onCreated.addListener(callCheck);
 
-//event handler when you click the button in the toolbar
+//event handler when you click the button in the address bar
 browser.pageAction.onClicked.addListener(privateWindow);

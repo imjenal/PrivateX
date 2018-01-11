@@ -2,7 +2,7 @@
 	"manifest_version": 2,
 	"name": "PrivateX",
 	"version": "1.0",
-	"description": "This add-on will allow the user to open a banking website in a private window, without the hassle of copying the URL and such. To use the addon, simply click the addon button[which looks like a magician's glasses strikedthrough] in the address bar, and if the site you're viewing is supported by our addon, you'll be able to open it in a Private Window with a single-click. In case the addon doesn't work on a URL, mail us at jyotsna17gupta[at]gmail[dot]com and we'll get back to you shortly, if and when we'll be able to support that URL.",
+	"description": "This add-on lets the user open a banking website in a private window, without the hassle of copying the URL. In-case an URL doesn't work, mail us at jyotsna17gupta [AT] gmail [DOT] com. Supported websites are listed in the RBI's banking directory.",
 	 "homepage_url": "https://github.com/jyotsna17gupta/PrivateX",
 	// Addon Manager Icons
 	"icons": {

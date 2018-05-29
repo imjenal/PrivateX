@@ -1,10 +1,9 @@
 {
 	"manifest_version": 2,
 	"name": "PrivateX",
-	"version": "2.0",
+	"version": "2.1",
 	"description": "This add-on lets the user open websites with critical user information [Like banking, travel sites, etc] in a private window, without the hassle of copying the URL. In-case an URL doesn't work, mail us at jyotsna17gupta [AT] gmail [DOT] com.",
 	 "homepage_url": "https://github.com/jyotsna17gupta/PrivateX",
-	// Addon Manager Icons
 	"icons": {
 		"16": "icons/unsafe-16.png",
 		"32": "icons/unsafe-32.png",
@@ -12,12 +11,14 @@
 		"64": "icons/unsafe-64.png",
 		"128": "icons/unsafe-128.png"
 	},
-	
-	"permissions": [
+
+	"permissions": ["webRequest",
+		"webRequestBlocking",
+		"<all_urls>",
 		"activeTab",
 		"tabs"
 		],
-	
+
 	"page_action": {
 		"browser_style": true,
 		"default_icon": {
@@ -25,12 +26,12 @@
 		"32": "icons/unsafe-32.png",
 		"48": "icons/unsafe-48.png"
 	},
-	
+
 	"default_title": "Click here for Private browsing!"
 	},
-	  
+
 	"background": {
 		"scripts": ["background.js"]
 	}
-	
+
 }

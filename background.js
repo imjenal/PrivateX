@@ -1,5 +1,5 @@
 var flag = true;
-    
+
 //method to open the tab in private window
 function goSecure(url, tab) {
 	browser.windows.create({"url": url, "incognito": true});
@@ -7,7 +7,7 @@ function goSecure(url, tab) {
 	browser.tabs.create({"url": "about:blank"});
     flag = false;
 }
- 		
+
 var matchURL = function(tab) {
 	var adcb = /^http(s)?:\/\/(www\.)?([-a-zA-Z0-9@:%_\+.~#?&//=]*)adcb(india|netlink|careers)?\.com([-a-zA-Z0-9@:%_\+.~#?&//=]*)/; //Abu Dhabi Commercial Bank Ltd.
     var american_exp = /^https:\/\/(www\.)?([-a-zA-Z0-9@:%_\+.~#?&//=]*)americanexpress\.com([-a-zA-Z0-9@:%_\+.~#?&//=]*)/; //American Express Bank Ltd.
@@ -56,12 +56,12 @@ var matchURL = function(tab) {
 	var pnb = /^https:\/\/(www\.)?([-a-zA-Z0-9@:%_\+.~#?&//=]*)(pnbindia\.in|netpnb\.com)([-a-zA-Z0-9@:%_\+.~#?&//=]*)/; //Punjab National Bank
 	var societegenerale = /^http(s)?:\/\/(www\.)?([-a-zA-Z0-9@:%_\+.~#?&//=]*)soc(ietegenerale\.(com|asia)|gensolutions\.com)([-a-zA-Z0-9@:%_\+.~#?&//=]*)/; //Societe Generale
 	var sonali = /^https:\/\/(www\.)?([-a-zA-Z0-9@:%_\+.~#?&//=]*)sonalibank\.com([-a-zA-Z0-9@:%_\+.~#?&//=]*)/; //Sonali Bank
-	var sc = /^https:\/\/(www\.)?([-a-zA-Z0-9@:%_\+.~#?&//=]*)s(c|tandardchartered(trade)?)\.co(m|\.in)([-a-zA-Z0-9@:%_\+.~#?&//=]*)/; //Standard Chartered Bank 
+	var sc = /^https:\/\/(www\.)?([-a-zA-Z0-9@:%_\+.~#?&//=]*)s(c|tandardchartered(trade)?)\.co(m|\.in)([-a-zA-Z0-9@:%_\+.~#?&//=]*)/; //Standard Chartered Bank
 	var sbm = /^http(s)?:\/\/(www\.)?([-a-zA-Z0-9@:%_\+.~#?&//=]*)sb(mgroup\.mu|imauritius\.com)([-a-zA-Z0-9@:%_\+.~#?&//=]*)/; //State Bank of Mauritius Ltd.
 	var sbici = /^https:\/\/(www\.)?([-a-zA-Z0-9@:%_\+.~#?&//=]*)sbici\.com([-a-zA-Z0-9@:%_\+.~#?&//=]*)/; //SBI Commercial and International Bank Ltd.
 	var sbi = /^https:\/\/(www\.)?([-a-zA-Z0-9@:%_\+.~#?&//=]*)sbi\.co\.in([-a-zA-Z0-9@:%_\+.~#?&//=]*)/; //State Bank of India
 	var sbi_bj = /^https:\/\/(www\.)?([-a-zA-Z0-9@:%_\+.~#?&//=]*)sbbjbank\.com([-a-zA-Z0-9@:%_\+.~#?&//=]*)/; //State Bank of Bikaner and Jaipur
-	var sbi_hyd = /^https:\/\/(www\.)?([-a-zA-Z0-9@:%_\+.~#?&//=]*)(sbhyd|onlinesbi(global)?)\.com([-a-zA-Z0-9@:%_\+.~#?&//=]*)/; //State Bank of Hyderabad 
+	var sbi_hyd = /^https:\/\/(www\.)?([-a-zA-Z0-9@:%_\+.~#?&//=]*)(sbhyd|onlinesbi(global)?)\.com([-a-zA-Z0-9@:%_\+.~#?&//=]*)/; //State Bank of Hyderabad
 	var sbi_mysore = /^https:\/\/(www\.)?([-a-zA-Z0-9@:%_\+.~#?&//=]*)bank\.sbi([-a-zA-Z0-9@:%_\+.~#?&//=]*)/; //State Bank of Mysore
 	var sbi_patiala = /^https:\/\/(www\.)?([-a-zA-Z0-9@:%_\+.~#?&//=]*)sbp\.co\.in([-a-zA-Z0-9@:%_\+.~#?&//=]*)/; //State Bank of Patiala
 	var sbi_travan = /^https:\/\/(www\.)?([-a-zA-Z0-9@:%_\+.~#?&//=]*)statebankoftravancore\.com([-a-zA-Z0-9@:%_\+.~#?&//=]*)/; //State Bank of Travancore
@@ -95,30 +95,48 @@ var matchURL = function(tab) {
 	//ING Vysya Bank: Merged with Kotak Mahindra Bank Ltd.
 	//The Bank of Rajasthan Limited : Merged with ICICI
 	//Lord Krishna Bank Ltd.: We don't trust this bank's site at all
-	
+
 	var travel_hotel= /^http(s)?:\/\/(www\.)?([-a-zA-Z0-9@:%_\+.~#?&//=]*)((9flats|exp(edia(inc)?|atarrivals)|amtrak|accesrail|airbnb|(asia|bargain|roomer|one|mbe|trazee|whole|smarter|broadway|wesaidgo)travel|(word|myfamily)travels|atlasobscura|bedforest|bravofly|budgetplaces|bumblehood|bus(bud|junction)|canadastays|cheap((o)?air|tickets(canada|city-discovery))|citypass|cofman|collegeweekends|(concert|think)hotels|cruise(critic|planners|shipcenters)|dealbase|discover(tnt|greece|ingireland)|dayuse|dohop|dwellable|fare(compare|portal|buzz|makers)|flight(aware|fox)|fly(aow|ertalk)|get(yourguide|there|aroom)|gadventures|glo(balhotelreview|betrooper|veler)|go(lfscape|seek|euro|transit)|(go)?(ibibo|trump)|groupleader|headforpoints|hip(munk|traveler)|holidaywatchdog|(in\.hotels)|hotel(s(-scanner)?|sbyday|tonight|scombined|urbano)|hotwire|inyourpocket|inspirock|justorbit|(travel\.jumia)|jacksonharries|(lastminute|priceline)(group)?|(late|oyo)rooms|loco2|lonelyplanet|seat61|mapquest|maritimematters|geemedia|(momon|opo)do|misterbandb|morehotels4less|(msn\.com\/en-in\/travel)|mus(afir|ement)|my(cityvenueescapes|driver|localpitch)|(ne(t|p)|scottscheap)flights|masflight|notesfromtheroad|otalo|pitchup|prontohotel|roadtrippers|roughguides|routofy|seatguru|secretescapes|sfstation|skift|sleepout|stay(uncle|ful)|spot(tedbylocals|ahome)|studentuniverse|the(suitest|trainline)|summerplaybook|tangareef|plumguide|ticketclever|tour(million|radar|sbylocals)|trav((buddy|ix)|el(port|worm|guru|lerspoint|lady|genio|muse|pod|yaari|zoo))|janbala|trekiz|tri(pping|ppy|vago|poso|pcombi)|ve(eve|gas|nere)|via|visitscotland|virtualtourist|wayn|wander(u|ingearl)|wikicity|whereivebeen|webjetlimited|world(hum|nomads)|wimdu|yamsafer|wotif|orbitz|rome2rio|(ixi|lili|hutch)go|jet(cost|radar)|kiwi|mobissimo|fromatob|edreams(odigeo)?|(voyager|billet)moinscher|scoutgps|lagisatu|walkit|roomstonite|ytbpulse|opentable|booking(buddy)?|rentalcars|swisscom|yatra|(clear|easemy|makemy|c|house)trip|agoda|goomo|travel(mob|guru|companionexchange)|(hostel|1degree)world|wego|abhibus|wizzair|diviac|liveaboard|padi|skyauction|schmap)\.com|(tri(padvisor|vago)|sotc|thomascook|hotelscombined|redbus)\.in|(airbnb|expedia|homeaway|hotelscompare|kayak|raileurope|wego)\.co\.in|(cheapflights|cruise(1st|compare)|dealchecker|directferries|goeuro|jactravel|knowhere|momondo|travelizer)\.co\.uk|(elong|findacrew|skyscanner)\.net|(entur|hitchwiki|travelblog|visit|wheelmap|wiki(voyage|travel))\.org|(sportsandtravel)\.com\.hk|(travelstart)\.co\.za|(hotel|transport(direct|nsw))\.info|(chinaknowledge|go(euro|pili)|hotel|)\.de|(momondo|cruise1st)\.com\.au|gopili\.(it|ru|es|co\.uk)|hotels\.n(l|g)|(goeuro)\.es|(jasons)\.co\.nz|(triip)\.me|(viva)\.gr|(oui)\.sncf|(momondo)\.ca|(en-tur)\.no|(yahoo\.com\/lifestyle\/tagged\/travel)|(google|paytm)\.com\/flights)([-a-zA-Z0-9@:%_\+.~#?&//=]*)/; //Travel & Hotel-Booking Sites
-	
+
 	var URLs = [adcb, american_exp, arab_bangladesh, allahabad, andhra, axis, antwerpdiamond, maybank, boa, bbk, barclays, bnpparibas, ceylon, bob, boi, bom, canara, central, calyon, citi, shinhan, ctbc, cityunion, coastalarea, corp, csb, deutsche, dcb, dena, indusind, icici, indian, iob, idbi, jpmorgan, kt, kotak, karnataka, kvb, mashreq, mizuho, oman, obc, psb, pnb, societegenerale, sonali, sc, sbm, sbici, sbi, sbi_bj, sbi_hyd, sbi_mysore, sbi_patiala, sbi_travan, syndicate, scotia, tokyo_mitsubishi, dbs, hsbc, tmb, dhan, federal, hdfc, jkbank, nainital, sangliurban, southindian, rbl, rbs, lv, uco, union, united, vijaya, yesbank, nabard, exim, nhb, sidbi, iibi, nedfi, travel_hotel];
-    			
-	for (var i = 0; i < URLs.length; i += 1) {  
+
+	for (var i = 0; i < URLs.length; i += 1) {
 		if (URLs[i].test(tab.url)) {
 			console.log(URLs[i]);
 			return true;
 		}
 	}
 }
-    
-function privateWindow(tab) {		
+
+function privateWindow(tab) {
 	if (!tab.incognito) {
 		if(matchURL(tab)){
-				if (flag) {							
+				if (flag) {
 					goSecure(tab.url, tab);
 				}
 		}
 	}
 }
 
-function callCheck(tab) {	
+function utmRemover(requestDetails) {
+	var originalURL= requestDetails.url;
+     var queryString = originalURL.indexOf('?');
+		 var utmString = originalURL.indexOf('utm_');
+     if (utmString > queryString) {
+			//var utm_check = new RegExp('([\?\&]utm_(source|medium|term|campaign|content|cid|reader|name|viz_id|pubreferrer)=[^&#]+)', 'ig');
+			//	var modifiedURL = originalURL.replace(utm_check, ''); //removing utm
+      // if (modifiedURL.charAt(queryString) === '&')
+      //       modifiedURL = modifiedURL.substr(0, queryString) + '?' + modifiedURL.substr(queryString + 1)
+
+			var modifiedURL = originalURL.replace(/(\&|\?)utm_([-a-zA-Z0-9@:%_\+.~#?&//=]*)/g , ''); //removing utm
+         if (modifiedURL != originalURL){
+             return { redirectUrl: modifiedURL };
+				 }
+     }
+
+}
+
+function callCheck(tab) {
 	if (!tab.incognito) {
 		flag = true;
 		showPageAction(tab);
@@ -139,23 +157,23 @@ function showPageAction(tab) {
 	else {
 		browser.pageAction.show(tab.id);
 		browser.pageAction.setIcon({tabId: tab.id, path: "icons/safe-48.png"});
-        browser.pageAction.setTitle({tabId: tab.id, title: "Woahh! You are safe!"});	
-	}		
+        browser.pageAction.setTitle({tabId: tab.id, title: "Woahh! You are safe!"});
+	}
 }
 
 browser.tabs.onActivated.addListener(function(id, info, tab) {
     browser.tabs.query({ currentWindow: true, active: true },
         function (tabArray) {
-            if(tabArray[0]){               
+            if(tabArray[0]){
 			   showPageAction(tabArray[0]);
-				
+
 		   }
         });
-		
+
 });
 
 browser.tabs.onUpdated.addListener(function(id, info, tab) {
-	showPageAction(tab);	
+	showPageAction(tab);
 });
 
 //event handler when a new tab is created
@@ -163,3 +181,9 @@ browser.tabs.onCreated.addListener(callCheck);
 
 //event handler when you click the button in the address bar
 browser.pageAction.onClicked.addListener(privateWindow);
+
+browser.webRequest.onBeforeRequest.addListener(
+  utmRemover,
+	{urls: ["<all_urls>"], types: ['main_frame']},
+	 ['blocking']
+ );
